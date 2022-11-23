@@ -1,5 +1,23 @@
 # REST API with Spring Boot
 
+## Q&A
+
+### What is springmockk?
+
+### What is `lateinit var`?
+
+### `@` をつける記法の意味は？
+
+### What is `@WebMvcTest`?
+
+### What is `@AutoConfigureWebTestClient`?
+
+### What is `@MockkBean`?
+
+### What is `@Autowired`?
+
+### What is `@Test`?
+
 ## Troubleshooting
 
 ### `java.lang.UnsupportedClassVersionError`
