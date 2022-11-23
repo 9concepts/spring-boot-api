@@ -1,5 +1,8 @@
 # REST API with Spring Boot
 
+- H2 Database
+    - http://localhost:8080/h2-console
+
 ## Q&A
 
 ### What is springmockk?
@@ -147,3 +150,14 @@ src/test/kotlin/
 3 directories, 2 files
 
 ```
+
+### H2 のコンソールで接続できない
+
+```text
+Database "/Users/9sako6/test" not found, either pre-create it or allow remote database creation (not recommended in secure environments) [90149-214] 90149/90149 (Help)
+```
+
+https://stackoverflow.com/a/67950919 の通りに `~/test.mv.db` を作ったら接続できるようにはなった。
+しかし、`COURSES` テーブルが作られていない。
+
+上記は間違いで、コンソールの JDBC URL に application.yaml で設定した `jdbc:h2:mem:testdb` を入れる必要があった。 
