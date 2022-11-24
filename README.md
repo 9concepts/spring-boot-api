@@ -3,6 +3,11 @@
 - H2 Database
     - http://localhost:8080/h2-console
 
+## JPA
+
+- `@GeneratedValue(strategy = GenerationType.AUTO)`
+    - 主キーを生成できる
+
 ## Q&A
 
 ### What is springmockk?
