@@ -17,6 +17,12 @@ curl -i 'http://localhost:8080/v1/greetings/9sako6'
 curl -i -d '{"id":null,"name":"Build Restful APIs using Kotlin and SpringBoot","category":"Development"}' -H "Content-Type: application/json" -X POST 'http://localhost:8080/v1/courses'
 ```
 
+`GET /v1/courses`
+
+```bash
+curl -i 'http://localhost:8080/v1/courses'
+```
+
 ## Q&A
 
 ### What is DTO?
