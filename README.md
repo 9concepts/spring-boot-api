@@ -23,6 +23,12 @@ curl -i -d '{"id":null,"name":"Build Restful APIs using Kotlin and SpringBoot","
 curl -i 'http://localhost:8080/v1/courses'
 ```
 
+`PUT /v1/courses/:course_id`
+
+```bash
+curl -i -d '{"id":null,"name":"Build Restful APIs using Kotlin & SpringBoot2","category":"Development"}' -H "Content-Type: application/json" -X PUT 'http://localhost:8080/v1/courses/1'
+```
+
 ## Q&A
 
 ### What is DTO?
