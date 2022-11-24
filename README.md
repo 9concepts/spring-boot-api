@@ -3,12 +3,23 @@
 - H2 Database
     - http://localhost:8080/h2-console
 
-## JPA
+## Endpoints
 
-- `@GeneratedValue(strategy = GenerationType.AUTO)`
-    - 主キーを生成できる
+`GET /v1/greetings/:name`
+
+```bash
+curl -i 'http://localhost:8080/v1/greetings/9sako6'
+```
+
+`POST /v1/courses`
+
+```bash
+curl -i -d '{"id":null,"name":"Build Restful APIs using Kotlin and SpringBoot","category":"Development"}' -H "Content-Type: application/json" -X POST 'http://localhost:8080/v1/courses'
+```
 
 ## Q&A
+
+### What is DTO?
 
 ### What is springmockk?
 
@@ -25,6 +36,27 @@
 ### What is `@Autowired`?
 
 ### What is `@Test`?
+
+### What is `@GeneratedValue(strategy = GenerationType.AUTO)`?
+
+主キーが自動生成されて DB に保存される。
+
+### ID はいつの間に振られているの？
+
+```kotlin
+    fun addCourse(courseDTO: CourseDTO): CourseDTO {
+    val courseEntity = courseDTO.let {
+        Course(null, it.name, it.category)
+    }
+    courseRepository.save(courseEntity)
+
+    logger.info("Save course is : $courseEntity")
+
+    return courseEntity.let {
+        CourseDTO(it.id, it.name, it.category) // here
+    }
+}
+```
 
 ## Troubleshooting
 
