@@ -76,6 +76,8 @@ curl -i -X DELETE 'http://localhost:8080/v1/courses/1'
 }
 ```
 
+### What is `@DataJpaTest`?
+
 ## Troubleshooting
 
 ### `java.lang.UnsupportedClassVersionError`
