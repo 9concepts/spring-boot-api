@@ -29,6 +29,12 @@ curl -i 'http://localhost:8080/v1/courses'
 curl -i -d '{"id":null,"name":"Build Restful APIs using Kotlin & SpringBoot2","category":"Development"}' -H "Content-Type: application/json" -X PUT 'http://localhost:8080/v1/courses/1'
 ```
 
+`DELETE /v1/courses/:course_id`
+
+```bash
+curl -i -X DELETE 'http://localhost:8080/v1/courses/1'
+```
+
 ## Q&A
 
 ### What is DTO?
