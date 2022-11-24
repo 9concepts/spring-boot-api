@@ -215,4 +215,8 @@ Database "/Users/9sako6/test" not found, either pre-create it or allow remote da
 https://stackoverflow.com/a/67950919 の通りに `~/test.mv.db` を作ったら接続できるようにはなった。
 しかし、`COURSES` テーブルが作られていない。
 
-上記は間違いで、コンソールの JDBC URL に application.yaml で設定した `jdbc:h2:mem:testdb` を入れる必要があった。 
+上記は間違いで、コンソールの JDBC URL に application.yaml で設定した `jdbc:h2:mem:testdb` を入れる必要があった。
+
+## References
+
+- [Spring Data JPA - Reference Documentation](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation)
