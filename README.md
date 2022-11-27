@@ -45,6 +45,28 @@ curl -i -d '{"id":null,"name":"9sako6"}' -H "Content-Type: application/json" -X 
 
 ## Q&A
 
+### `javax.persistence` とは？
+
+Java Persistence API (JPA)という、Java からリレーショナルデータベースを利用するための API である。
+主に、データベースアクセスというよりデータの永続化の機能を提供するらしい。
+
+ORM とはちょっと違う。
+
+Entity を用意する必要がある。Entity はデータベースのテーブルと関連づけられるクラスである。
+Entity のインスタンスは、対応するテーブルのレコードに相当する。
+Entity には `@Entity` アノテーションを付与する。
+Entity は、その名前と同じテーブルに紐づけられる。
+テーブルの名前と Entity クラスの名前を変えたい場合は `@Table` を使う。
+例えば `@Table(name = "Courses")` のようにアノテーションをすると、`Courses` テーブルに紐づけられる。
+
+JPA が ID を認識できるように、ID にあたるプロパティには `@Id` アノテーションをする。
+`@GeneratedValue` アノテーションをすると、自動で ID が生成される。
+
+#### References
+
+1. [初心者のためのJava Persistence API入門 - libro](https://www.tuyano.com/index2?id=5767409591910400)
+2. [Getting Started | Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/)
+
 ### What is DTO?
 
 Data Transfer Object の略。
