@@ -47,6 +47,20 @@ curl -i -d '{"id":null,"name":"9sako6"}' -H "Content-Type: application/json" -X 
 
 ### What is DTO?
 
+Data Transfer Object の略。
+DTO パターンというデザインパターンがある。
+DTO はデータを受け渡す専用のクラスである。
+DTO は getter/setter をもつ。ビジネスロジックはもたない。
+
+以下は考えられるメリット。
+
+- Data source からとってきた値に型をつける役割？
+
+#### References
+
+1. [P of EAA: Data Transfer Object](https://martinfowler.com/eaaCatalog/dataTransferObject.html)
+2. [データ転送オブジェクト - Martin Fowler's Bliki (ja)](https://bliki-ja.github.io/pofeaa/DataTransferObject/)
+
 ### What is springmockk?
 
 ### What is `lateinit var`?
