@@ -1,6 +1,7 @@
 package com.kotlinspring.repository
 
 import com.kotlinspring.util.courseEntityList
+import com.kotlinspring.util.instructorEntity
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -19,10 +20,17 @@ class CourseRepositoryIntegrationTests {
     @Autowired
     lateinit var courseRepository: CourseRepository
 
+    @Autowired
+    lateinit var instructorRepository: InstructorRepository
+
     @BeforeEach
     fun setUp() {
+        instructorRepository.deleteAll()
         courseRepository.deleteAll()
-        val courses = courseEntityList()
+
+        val instructor = instructorEntity()
+        instructorRepository.save(instructor)
+        val courses = courseEntityList(instructor)
         courseRepository.saveAll(courses)
     }
 
