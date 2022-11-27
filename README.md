@@ -5,6 +5,8 @@
 
 ## Endpoints
 
+### Courses
+
 `GET /v1/greetings/:name`
 
 ```bash
@@ -33,6 +35,12 @@ curl -i -d '{"id":null,"name":"Build Restful APIs using Kotlin & SpringBoot2","c
 
 ```bash
 curl -i -X DELETE 'http://localhost:8080/v1/courses/1'
+```
+
+### Instructors
+
+```bash
+curl -i -d '{"id":null,"name":"9sako6"}' -H "Content-Type: application/json" -X POST 'http://localhost:8080/v1/instructors'
 ```
 
 ## Q&A
